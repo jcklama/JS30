@@ -1,0 +1,7 @@
+<input #checkbox type="checkbox" (click)="open()">
+<canvas #canvas></canvas>
+<h1>MENU</h1>
+<div #contents id="contents">
+  <i class="fas fa-times" (click)="close()"></i>
+  <a *ngFor="let app of mockContent" [routerLink]="app.routerLink" class="app" (click)="close()">{{app.name}}</a>
+</div>

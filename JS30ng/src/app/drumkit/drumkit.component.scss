@@ -1,0 +1,41 @@
+.drumkit{
+    background: url(http://i.imgur.com/b9r5sEL.jpg);
+    background-size: cover;
+    background-position: 0 100%;
+    height: 100vh;
+    font-family: 'Space Mono', monospace;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    .instr-box{
+        height: 90px;
+        width: 110px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        border: 4px solid black;
+        border-radius: 4px;
+        margin-right: 25px;
+        background-image: linear-gradient(to right, rgba(0,0,0,0.5), rgba(0,0,0,0.5));
+
+        h4{
+            color: white;
+            font-size: 34px;
+            margin: 0px 0px 5px 0;
+        }
+
+        p{
+            color: goldenrod;
+            text-transform: uppercase;
+            margin: 0;
+            font-size: 14px;
+            font-weight: 700;
+        }
+    }
+
+    .instr-box:last-child{
+        margin-right: 0;
+    }
+}

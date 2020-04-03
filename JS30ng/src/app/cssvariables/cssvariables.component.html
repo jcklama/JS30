@@ -1,0 +1,22 @@
+<div id="cssVariables">
+  <h1>Update CSS Variables with
+    <span id="js" #js>JS</span>
+  </h1>
+  <div id="controls">
+    <div id="spacing-div">
+      <label for="spacing">Spacing:</label>
+      <input type="range" min="0" max="99" value="14" id="spacing" #spacing (mouseup)="changeSpacing()">
+    </div>
+    <div id="blur-div">
+      <label for="blur">Blur:</label>
+      <input type="range" min="0" max="19" value="9.5" id="blur" #blur (mouseup)="changeBlur()">
+    </div>
+    <div id="color-div">
+      <label for="color">Base Color</label>
+      <input type="color" id="color" value="" #color (input)="changeColor()">
+    </div>
+  </div>
+  <div id="image" #imageContainer>
+    <img src="../../assets/images/andre-roma-1315656-unsplash.jpg">
+  </div>
+</div>

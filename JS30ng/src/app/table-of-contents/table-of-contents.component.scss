@@ -1,0 +1,70 @@
+#contents{
+    display: flex;
+    flex-wrap: wrap;
+    padding: 25px 35px;
+    background: mediumturquoise;
+    color: whitesmoke;
+    font-weight: 500;
+    transform: translateY(calc(-100% - 45px));
+    transition: transform 0.5s;
+    position: absolute;
+    width: 1440px;
+    height: 350px;
+    z-index: 100;
+
+    .fa-times{
+        cursor: pointer;
+        font-size: 20px;
+        text-shadow: 1px 1px black;
+        position: absolute;
+        top: 15px;
+        left: 18px;
+    }
+
+    .app{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-family: 'Montserrat';
+        width: calc(100% / 5);
+        height: 40px;
+        text-align: center;
+        text-decoration: none;
+        color: whitesmoke;
+    }
+
+    .app:hover{
+        cursor: pointer;
+        background: tomato;
+        color: rgb(49, 48, 48);
+        font-weight: 600;
+        text-decoration: none;
+    }
+}
+canvas{
+    position: absolute;
+    width: 130px;
+    height: 40px;
+    z-index: 70;
+}
+
+h1{
+    margin: 0;
+    position:absolute;
+    font-family: 'Montserrat';
+    color: whitesmoke;
+    top: 7px;
+    left: 50%;
+    transform: translate(-50%, 0);
+    font-size: 16px;
+    z-index: 80;
+}
+
+input{
+    position: absolute;
+    top: -5px;
+    cursor: pointer;
+    opacity: 0;
+    z-index: 90;
+}
+
