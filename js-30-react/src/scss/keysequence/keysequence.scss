@@ -1,0 +1,44 @@
+.key-sequence {
+    @include component-background(tomato, cursive);
+    font-weight: 500;
+    justify-items: center;
+    align-items: center;
+    font-size: 24px;
+    width: 100vw;
+    position: fixed;
+    z-index: 0;
+
+    .wrapper {
+        display: grid;
+        justify-items: center;
+
+        p {
+            justify-self: center;
+            margin: 0;
+
+            span {
+                color: mediumaquamarine;
+                font-weight: 700;
+                letter-spacing: 3px;
+                text-shadow: 1px 1px 1px darkgreen;
+            }
+        }
+
+        .guesses {
+            display: grid;
+            justify-items: center;
+            width: 1000px;
+
+            .character {
+                padding: 0 10px;
+                border-right: 1px solid rgba(255,255,255, 0.4);
+                border-left: 1px solid rgba(255,255,255, 0.4);       
+            }
+        }
+
+        img {
+            height: 200px;
+            border-radius: 5px;
+        }
+    }
+}

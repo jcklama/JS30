@@ -1,0 +1,10 @@
+.custom-video-player {
+    @include component-background(linear-gradient(45deg, purple, goldenrod));
+    justify-content: center;
+    align-content: center;
+
+    video {
+        background: black;
+        border-radius: 5px;
+    }
+}

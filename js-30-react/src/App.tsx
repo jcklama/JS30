@@ -1,12 +1,29 @@
 import React from 'react';
-import logo from './logo.svg';
-import './App.css';
-import TableOfContents from './TableOfContents/TableOfContents';
+import { exercises } from './data'
+import ExerciseCard from './ExerciseCard'
 
-function App() {
-  return (
-    <TableOfContents></TableOfContents>
-  );
+export interface Props {
+  history: PropsHistory
+}
+
+export interface PropsHistory {
+  push: Function
+}
+
+export interface State {}
+
+class App extends React.Component<Props, State> {
+  
+  render() {
+    return (
+      <div className="table-of-contents">
+          {exercises.map((name) => <ExerciseCard 
+            name={name} 
+            key={name} 
+            push={this.props.history.push}/>)}
+      </div>
+    );
+  }
 }
 
 export default App;

@@ -1,0 +1,7 @@
+@mixin component-background($bg-color, $font: 'Trebuchet MS', $font-color: black) {
+    background: $bg-color;
+    font-family: $font;
+    display: grid;
+    min-height: 100vh;
+    color: $font-color;
+}

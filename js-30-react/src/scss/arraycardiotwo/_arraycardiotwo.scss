@@ -1,0 +1,16 @@
+.cardio-two {
+    @include component-background(black, "Courier New", mediumslateblue);
+    justify-content: center;
+    align-items: center;
+
+    h1 {
+        margin: 0;
+        align-self: end;
+        justify-self: center;
+    }
+
+    h2 {
+        align-self: start;
+        justify-self: center;
+    }
+}

@@ -1,0 +1,37 @@
+.hold-shift {
+    @include component-background(salmon, 'Courier New');
+    justify-content: center;
+    align-content: center;
+    font-weight: 600;
+
+    .inbox {
+        list-style: none;
+        padding: 3px 0;
+        background-color: whitesmoke;
+        border-radius: 8px;
+        display: grid;
+    
+
+        li {
+            display: grid;
+            grid-template-columns: 50px 3fr;
+            padding: 15px 35px 15px 15px;
+            border-bottom: 1px solid salmon;
+
+            input[type='checkbox'],
+            label {
+                align-self: center;
+            }
+
+            input[type='checkbox'] {
+                justify-self: center;
+                position: relative;
+                bottom: 1px;
+            }
+            
+            &:last-child {
+                border-bottom: none; 
+            }
+        }
+    }
+}

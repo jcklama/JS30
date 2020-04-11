@@ -1,0 +1,19 @@
+.devtools {
+    @include component-background(whitesmoke);
+    justify-content: center;
+    align-items: center;
+    font-size: 20px;
+
+    h1 {
+        font-weight: 400;
+        display: grid;
+
+        span {
+           font-style: italic;
+           color: mediumslateblue;
+           font-weight: 600;
+           text-shadow: 1px 1px 1px gray;
+           align-self: center;
+        }
+    }
+}
