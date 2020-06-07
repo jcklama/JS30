@@ -1,10 +1,144 @@
 .custom-video-player {
-    @include component-background(linear-gradient(45deg, purple, goldenrod));
+    @include component-background(linear-gradient(black, tomato));
     justify-content: center;
     align-content: center;
 
-    video {
-        background: black;
-        border-radius: 5px;
+    .video-wrapper {
+        position: relative;
+
+        video {
+            background: black;
+        }
+
+        progress {
+            transition: all 0.2s ease-in-out;
+            color: white;
+            background-color: black;
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            -webkit-appearance: none;
+            appearance: none;
+            width: 100%;
+            // height: 6px;
+        }
+
+        // styles the background container that the progress bar is in
+        progress::-webkit-progress-bar {
+            background: rgba(255, 255, 255, 0.2);
+            height: 6px;
+            position: relative;
+            top: 9.5px;
+            
+            &:hover {
+                cursor: ew-resize;
+            }
+        }   
+
+        progress::-webkit-progress-value {
+            background: tomato;
+            height: 6px;
+        }
+
+        .video-controls {
+            // transition triggered by hover of 'video-wrapper' (line 126)
+            transition: all 0.2s ease-in-out;
+            display: grid;
+            opacity: 0;
+            grid-template-columns: 1fr 4fr 4fr 1fr 1fr;
+            justify-items: space-between;
+            position: absolute;
+            left: 0;
+            bottom: 0;
+            width: 100%;
+
+            .play-button {
+                background: black;
+                border: none;
+                font-size: 24px;
+
+                .play {
+                    color: tomato;
+                }
+                
+                .pause {
+                    color: tomato;
+                    font-size: 20px;
+                    position: relative;
+                }
+
+                &:focus {
+                    outline: none;
+                }
+            }
+
+            input[type="range"] {
+                -webkit-appearance: none;
+                background: black;
+
+                &:focus {
+                    outline: none;
+                }
+            }
+
+            input[type="range"]::-webkit-slider-runnable-track {
+                height: 8px;
+                background: rgba(255, 255, 255, 0.2);
+                padding: 0;
+                margin: 0;
+            }
+
+            input[type="range"].dirty::-webkit-slider-runnable-track {
+                background: rgba(255, 255, 255, 0.75);
+            }
+
+            input[type="range"]::-webkit-slider-thumb {
+                -webkit-appearance: none;
+                background-color: tomato;
+                height: 20px;
+                width: 12px;
+                border-radius: 2px;
+                position: relative;
+                bottom: 6px;
+            }
+
+            .skips {
+                color: rgba(255, 255, 255, 0.8);
+                position: relative;
+                bottom: 3px;
+                font-size: 14px;
+                margin-left: 5px;
+                font-weight: 600;
+
+                span {
+                    font-size: 24px;
+                    position: relative;
+                    top: 2px;
+                }
+
+                &:hover {
+                    cursor: pointer;
+                }
+            }     
+        }
+        
+        &:hover progress {
+            transform: translateY(-45px);
+            // height: 11px;
+        }
+
+        &:hover progress::-webkit-progress-bar {
+            height: 11px;
+            top: 0;
+        }
+        &:hover progress::-webkit-progress-value {
+            height: 11px;
+        }
+
+        &:hover .video-controls {
+            opacity: 1;
+            transform: translateY(-15px);
+        }
+
     }
 }

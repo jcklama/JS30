@@ -26,6 +26,7 @@ export default class KeySequence extends React.Component<Props, State> {
 
     componentDidMount() {
         this.componentArea.current?.focus();
+        console.log('Answer is %cwelkin', 'color:tomato;font-weight:600')
     }
 
     keyDownHandler(e: SyntheticEvent) {
